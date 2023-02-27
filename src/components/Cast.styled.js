@@ -9,7 +9,7 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   width: 160px;
-  height: 300px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,6 +25,7 @@ export const Item = styled.li`
   }
 `;
 export const Image = styled.img`
-  width: inherit;
+  width: 160px;
+  height: 240px;
   display: block;
 `;

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Form, Input, SearchButton } from './SearchForm.styled';
+import { toast } from 'react-toastify';
 
 export const SearchForm = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
@@ -12,7 +13,7 @@ export const SearchForm = ({ onSubmit }) => {
     onSubmit(query);
     setQuery('');
     if (query === '') {
-      alert('Enter you search request');
+      toast.error('Enter you search request');
       return;
     }
   };

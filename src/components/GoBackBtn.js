@@ -6,5 +6,5 @@ export const GoBackBtn = ({ path }) => {
 };
 
 GoBackBtn.propTypes = {
-  path: PropTypes.object.isRequired,
+  path: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
 };
