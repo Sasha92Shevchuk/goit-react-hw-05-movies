@@ -1,15 +1,21 @@
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-export const MovieCard = ({ id, title, name }) => {
+import { Item, TitleMovie } from './MovieCard.styled';
+
+export const MovieCard = ({ id, title, name, poster_path }) => {
   const location = useLocation();
   const currentPage = location.pathname === '/' ? '/movies' : location.pathname;
 
   return (
-    <li>
+    <Item>
       <Link to={`${currentPage}/${id}`} state={{ from: location }}>
-        {title || name}
+        <img
+          src={`https://image.tmdb.org/t/p/w300${poster_path}`}
+          alt={title}
+        />
+        <TitleMovie>{title || name}</TitleMovie>
       </Link>
-    </li>
+    </Item>
   );
 };
 

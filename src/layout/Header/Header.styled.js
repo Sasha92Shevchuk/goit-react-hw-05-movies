@@ -9,17 +9,20 @@ export const HeaderBox = styled.header`
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     height: 60px;
     margin: 0;
     padding: 0;
-    li:hover,
-    li:focus {
-      transform: scale(1.1);
-      transition: all 250ms;
-    }
+
     a {
-      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.8);
+      transition: all 250ms;
+      :hover,
+      :focus {
+        color: green;
+      }
     }
   }
 `;

@@ -1,6 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { DetailsBox, InfoBox } from './MovieInfo.styled';
+import { CardBox, DetailsBox, InfoBox } from './MovieInfo.styled';
 export const MovieInfo = ({
   poster_path,
   release_date,
@@ -14,12 +14,12 @@ export const MovieInfo = ({
 
   return (
     <>
-      <DetailsBox>
+      <CardBox>
         <img
           src={`https://image.tmdb.org/t/p/w200${poster_path}`}
           alt={title}
         />
-        <div>
+        <DetailsBox>
           <h1>
             {title || name} ({new Date(release_date).getFullYear()})
           </h1>
@@ -28,8 +28,8 @@ export const MovieInfo = ({
           <p>{overview}</p>
           <h3>Genres </h3>
           <p>{allGenres}</p>
-        </div>
-      </DetailsBox>
+        </DetailsBox>
+      </CardBox>
       <h4>Additional information</h4>
       <InfoBox>
         <Link to="cast">Cast</Link>

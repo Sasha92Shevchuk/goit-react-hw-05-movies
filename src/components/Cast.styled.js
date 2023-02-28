@@ -8,24 +8,22 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  width: 160px;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  h4 {
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    margin: 0;
-    padding: 0;
-  }
+  width: 160px;
+  height: fit-content;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
 `;
 export const Image = styled.img`
+  display: block;
   width: 160px;
   height: 240px;
-  display: block;
+  border-radius: 10px 10px 0 0;
 `;
