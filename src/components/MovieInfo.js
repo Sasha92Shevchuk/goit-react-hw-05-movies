@@ -16,7 +16,7 @@ export const MovieInfo = ({
     <>
       <CardBox>
         <img
-          src={`https://image.tmdb.org/t/p/w200${poster_path}`}
+          src={`https://image.tmdb.org/t/p/w300${poster_path}`}
           alt={title}
         />
         <DetailsBox>
